@@ -2,112 +2,119 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Charity A Day</title>
   <style>
     body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
       margin: 0;
-      padding: 0;
-      background-color: #f5faff;
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
       color: #111827;
+      background-color: #ffffff;
       line-height: 1.6;
     }
-    header {
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+    .site-header {
       background: #ffffff;
-      text-align: center;
-      padding: 2rem 1rem 1rem;
       border-bottom: 1px solid #e5e7eb;
-    }
-    header img {
-      width: 100px;
-      height: auto;
-      margin-bottom: 0.5rem;
-    }
-    header h1 {
-      margin: 0;
-      font-size: 1.75rem;
-      font-weight: 600;
-    }
-    nav {
-      text-align: center;
       padding: 1rem 0;
-      background-color: #f0f4ff;
-      border-bottom: 1px solid #e5e7eb;
     }
-    nav a {
-      margin: 0 1rem;
-      color: #2563eb;
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+    .nav {
+      float: right;
+    }
+    .nav a {
+      margin-left: 1.5rem;
       text-decoration: none;
+      color: #2563eb;
       font-weight: 500;
     }
-    main {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 2rem 1rem;
+    .hero {
+      background: #f5faff;
+      padding: 6rem 0;
+      text-align: center;
     }
-    section {
-      margin-bottom: 3rem;
+    .hero h1 {
+      font-size: 2.75rem;
+      margin-bottom: 1rem;
     }
-    section h2 {
-      color: #1e3a8a;
-      margin-bottom: 0.5rem;
-      font-size: 1.5rem;
+    .hero p {
+      font-size: 1.25rem;
+      color: #374151;
     }
-    .btn {
+    .button {
       display: inline-block;
-      background: #2563eb;
+      margin-top: 1.5rem;
+      padding: 0.8rem 1.5rem;
+      background-color: #2563eb;
       color: white;
-      padding: 0.6rem 1.2rem;
-      border: none;
-      border-radius: 8px;
       text-decoration: none;
-      margin-top: 1rem;
+      border-radius: 6px;
       font-weight: 600;
     }
-    .impact-note {
-      background-color: #e0f2fe;
-      padding: 1rem;
-      border-radius: 8px;
-      margin-top: 1rem;
-      color: #0369a1;
-    }
-    footer {
+    .site-footer {
       text-align: center;
-      padding: 2rem 1rem;
-      background-color: #f0f4ff;
+      padding: 2rem 0;
       font-size: 0.9rem;
-      color: #4b5563;
+      background-color: #f0f4ff;
+      color: #6b7280;
     }
-    footer a {
+    .site-footer a {
       color: #2563eb;
       text-decoration: underline;
+    }
+    .page-title {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+    .page-content {
+      padding: 4rem 0;
+    }
+    section {
+      border-bottom: 1px solid #e5e7eb;
+      padding: 4rem 0;
+    }
+    section:last-of-type {
+      border: none;
     }
   </style>
 </head>
 <body>
-  <header>
-    <img src="./logo.png" alt="Charity A Day Logo" />
-    <h1>Charity A Day</h1>
-    <p>Daily impact through trivia — one cause at a time.</p>
+  <header class="site-header">
+    <div class="container">
+      <div class="logo">Charity A Day</div>
+      <nav class="nav">
+        <a href="#about">About</a>
+        <a href="#how">How It Works</a>
+        <a href="#work">Our Work</a>
+        <a href="#impact">Impact</a>
+        <a href="#involved">Get Involved</a>
+      </nav>
+    </div>
   </header>
 
-  <nav>
-    <a href="#about">About</a>
-    <a href="#how">How It Works</a>
-    <a href="#our-work">Our Work</a>
-    <a href="#impact">Our Impact</a>
-    <a href="#involved">Get Involved</a>
-  </nav>
-
   <main>
-    <section id="about">
-      <h2>About the App</h2>
-      <p><strong>Charity A Day</strong> is a daily-impact mobile app that blends learning and giving. Each day, users answer one trivia question. Whether right or wrong, a real donation is made by a sponsor to a featured charity. The app is 100% free, ad-free, and tracks no user data — just simple, daily good.</p>
+    <section class="hero">
+      <div class="container">
+        <h1>Daily Impact Through Trivia</h1>
+        <p>One question. One sponsor. One real donation — every day.</p>
+        <a href="#about" class="button">Learn More</a>
+      </div>
     </section>
 
-    <section id="how">
-      <h2>How It Works</h2>
+    <section id="about" class="page-content container">
+      <h1 class="page-title">About the App</h1>
+      <p><strong>Charity A Day</strong> is a daily-impact mobile application designed to blend learning, altruism, and brand sponsorship into a simple, powerful routine. Each day, the app features a different vetted nonprofit organization. Whether the trivia answer is right or wrong, a real donation is made by a corporate sponsor — never the user. 100% free. 100% ad-free. Always impactful.</p>
+    </section>
+
+    <section id="how" class="page-content container">
+      <h1 class="page-title">How It Works</h1>
       <ol>
         <li>Open the app daily to see a trivia question.</li>
         <li>Answer it — and trigger a sponsor-funded donation.</li>
@@ -115,33 +122,34 @@
       </ol>
     </section>
 
-    <section id="our-work">
-      <h2>Our Work</h2>
+    <section id="work" class="page-content container">
+      <h1 class="page-title">Our Work</h1>
       <p>We feature a new nonprofit every day — from climate action and education to health and humanitarian aid. Our partners range from grassroots changemakers to well-established organizations. We spotlight them with care, giving them donations and visibility they might otherwise not receive.</p>
     </section>
 
-    <section id="impact">
-      <h2>Our Impact</h2>
+    <section id="impact" class="page-content container">
+      <h1 class="page-title">Our Impact</h1>
       <p>The app is not publicly released yet. Once live, we aim to build the world's simplest daily donation tool — where every tap turns into real change.</p>
-      <div class="impact-note">
+      <div style="background-color: #e0f2fe; padding: 1rem; border-radius: 8px; margin-top: 1rem; color: #0369a1;">
         Launching soon on iOS. Stay tuned!
       </div>
     </section>
 
-    <section id="involved">
-      <h2>Get Involved</h2>
+    <section id="involved" class="page-content container">
+      <h1 class="page-title">Get Involved</h1>
       <ul>
         <li><strong>Charities</strong>: Be featured in the app and receive free donations.</li>
         <li><strong>Sponsors</strong>: Fund giving and earn meaningful brand visibility.</li>
         <li><strong>Users</strong>: Answer one question daily and make a real impact.</li>
       </ul>
-      <a href="mailto:info@charityaday.com" class="btn">Contact Us</a>
+      <a href="mailto:info@charityaday.com" class="button">Contact Us</a>
     </section>
   </main>
 
-  <footer>
-    <p>&copy; 2025 Charity A Day</p>
-    <p><a href="mailto:info@charityaday.com">info@charityaday.com</a></p>
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2025 Charity A Day • <a href="mailto:info@charityaday.com">info@charityaday.com</a></p>
+    </div>
   </footer>
 </body>
 </html>
